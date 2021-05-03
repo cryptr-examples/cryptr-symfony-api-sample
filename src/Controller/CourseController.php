@@ -1,34 +1,3 @@
-# Cryptr with Symfony API
-
-## 02 - Validate access tokens
-
-### Install dependencies
-
-🛠️️ To begin, install these dependencies using composer:
-
-```bash
-composer require symfony/maker-bundle --dev
-composer require doctrine/annotations
-composer require symfony/debug-bundle --dev
-composer require symfony/security-bundle
-composer require firebase/php-jwt
-composer require symfony/http-client
-composer require nelmio/cors-bundle
-```
-
-### Create sample resource controller
-
-🛠 First, create a `CourseController`. We'll use the [symfony/maker bundle](https://symfony.com/blog/introducing-the-symfony-maker-bundle) to generate it:
-
-```bash
-php bin/console make:controller CourseController
-```
-
-Note: __The purpose of the controller is to receive a request (which has already been selected by a route) and to define the appropriate response.__
-
-🛠️️ Now open up `src/Controller/CourseController.php` and replace its content with the following:
-
-```php
 <?php
  
 namespace App\Controller;
@@ -62,8 +31,3 @@ class CourseController extends AbstractController
        return new JsonResponse($courses);
    }
 }
-```
-
-🛠️️ Run the server with command `symfony server:start` and open **insomnia** or **postman** to make a `GET` on `http://localhost:8000/api/v1/courses` request which should end with `200`
-
-[Next](https://github.com/cryptr-examples/cryptr-symfony-api-sample/tree/03-add-your-cryptr-credentials)
