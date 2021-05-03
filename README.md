@@ -287,9 +287,9 @@ class CryptrGuardAuthenticator extends AbstractGuardAuthenticator
 **How the CryptrGuardAuthenticator proceeds:**
 
 1. Read the access token in the header  
-2. Guard read public key from cryptr to validate access token. If it succeeds, the response will be `200`, if not, it will be `401`.
+2. Guard read public key from Cryptr to validate the access token. If it succeeds, the response will be `200`, if not, it will be `401`.
 
-Tips: __If some routes are public, developers can update CryptrGuardAuthenticator::supports methods to handle this, returning false will skip the authorization check__
+Tip: __If some routes are public, developers can update `CryptrGuardAuthenticator::supports` methods to handle this, returning false will skip the authorization check__
 
 ### Use CryptrGuardAuthenticator
 
@@ -334,7 +334,7 @@ security:
 
 Note: __firewalls is used to define how users will be authenticated__
 
-⚠️ Symphony may run on HTTPS protocol, the client app should then target the related https url, if not, the browser will forbid the request due to CORS prohibiting redirections from http to https.
+⚠️ Symfony may run on HTTPS protocol, the client app should then target the related https url, if not, the browser will forbid the request due to CORS prohibiting redirections from http to https.
 
 ### Test with a Cryptr Vue app
 
