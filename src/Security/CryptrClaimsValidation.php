@@ -69,7 +69,7 @@ class JwtClaimsValidation
  }
  
  public function validateNotBefore($decodedToken) {
-   if(isset($decodedToken->jwt)) {
+   if(isset($decodedToken->nbf)) {
      $notBefore = DateTime::createFromFormat( 'U', $decodedToken->nbf );
  
      if ($this->currentTime() < $notBefore){
