@@ -26,7 +26,7 @@ We must create a User class or an entity in order to register or authenticate a 
 touch src/Security/CryptrClaimsValidation.php src/Security/CryptrGuardAuthenticator.php
 ```
 
-🛠️️ Now open up the newly created `src/Security/JwtClaimsValidation.php` file and paste in the following:
+🛠️️ Now open up the newly created `src/Security/CryptrClaimsValidation.php` file and paste in the following:
 
 ```php
 <?php
